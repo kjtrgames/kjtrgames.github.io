@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Supabase のログインでもいいね</title>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+</head>
+<body>
+  <button id="login">GitHubでログイン</button>
+  <button id="logout">ログアウト</button>
+  <div id="user"></div>
+
+  <script>
+    // SupabaseプロジェクトのURLとanonキーをセット
+    const SUPABASE_URL = 'https://azoprigwlixblpfxeqjs.supabase.co'; // あなたのSupabaseプロジェクトURL
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF6b3ByaWd3bGl4YmxwZnhlcWpzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgxODQwMTMsImV4cCI6MjA3Mzc2MDAxM30.3gdN5k1j7p0Cc--20Fo7-Y_GJ3626Yl7qrl_BIB4S5E'; // anonキー
+    const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    // ログイン
+    document.getElementById('login').onclick = async () => {
+      const { error } = await supabase.auth.signInWithOAuth({ provider: 'github' });
+      if (error) alert(error.message);
+    };
+
+    // ログアウト
+    document.getElementById('logout').onclick = async () => {
+      await supabase.auth.signOut();
+      location.reload();
+    };
+
+    // セッション確認
+    supabase.auth.onAuthStateChange((event, session) => {
+      if (session) {
+        document.getElementById('user').innerText = `こんにちは, ${session.user.email}`;
+      } else {
+        document.getElementById('user').innerText = '未ログイン';
+      }
+    });
+  </script>
+</body>
+</html>
