@@ -5,7 +5,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 </head>
 <body>
-  <button id="login">GitHubでログイン</button>
+  <button id="login_github">GitHubでログイン</button>
   <button id="logout">ログアウト</button>
   <div id="user"></div>
 
@@ -16,11 +16,11 @@
     const sb_client = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
     // ログイン
-    document.getElementById('login').onclick = async () => {
+    document.getElementById('login_github').onclick = async () => {
       const { error } = await sb_client.auth.signInWithOAuth({
         provider: 'github',
         options: {
-          redirectTo: 'https://kjtrgames.github.io/'
+          redirectTo: 'https://kjtrgames.github.io/repo_login/login/callback.html' // 認証後にリダイレクトするURL
         }
       });
       if (error) alert(error.message);
@@ -33,7 +33,7 @@
     };
 
     // セッション確認
-    sb_client.auth.onAuthStateChange((event, session) => {
+    supabase.auth.onAuthStateChange((event, session) => {
       if (session) {
         document.getElementById('user').innerText = `こんにちは, ${session.user.email}`;
       } else {
