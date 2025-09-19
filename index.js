@@ -64,29 +64,29 @@ hdr.innerHTML = `
       <li><a href="index.html" home>&emsp;HOME&emsp;</a></li>
       <li><a href="/programming">&emsp;プログラミング&emsp;</a>
         <ul>
-          <li><a href="//osakanakuwaenai.github.io/programming/js">Java Script</a></li>
-          <li><a href="//osakanakuwaenai.github.io/programming/scratch">Scratch</a></li>
+          <li><a href="//kjtrgames.github.io/programming/js">Java Script</a></li>
+          <li><a href="//kjtrgames.github.io/programming/scratch">Scratch</a></li>
         </ul>
       </li>
-      <li><a href="//osakanakuwaenai.github.io/minecraft">&emsp;&emsp;マイクラ&emsp;&emsp;</a>
+      <li><a href="//kjtrgames.github.io/minecraft">&emsp;&emsp;マイクラ&emsp;&emsp;</a>
         <ul>
-          <li><a href="//osakanakuwaenai.github.io/minecraft/building">建築</a></li>
-          <li><a href="//osakanakuwaenai.github.io/minecraft/redstone">赤石</a></li>
-          <li><a href="//osakanakuwaenai.github.io/minecraft/rtm">RealTrainMod</a></li>
-          <li><a href="//osakanakuwaenai.github.io/minecraft/others">その他のMOD</a></li>
+          <li><a href="//kjtrgames.github.io/minecraft/building">建築</a></li>
+          <li><a href="//kjtrgames.github.io/minecraft/redstone">赤石</a></li>
+          <li><a href="//kjtrgames.github.io/minecraft/rtm">RealTrainMod</a></li>
+          <li><a href="//kjtrgames.github.io/minecraft/others">その他のMOD</a></li>
         </ul>
       </li>
-      <li><a href="//osakanakuwaenai.github.io/music">&emsp;&emsp;作曲&emsp;&emsp;</a>
+      <li><a href="//kjtrgames.github.io/music">&emsp;&emsp;作曲&emsp;&emsp;</a>
         <ul>
-        <li><a href="//osakanakuwaenai.github.io/music/original">オリジナル</a></li>
-          <li><a href="//osakanakuwaenai.github.io/music/second">二次創作</a></li>
-          <li><a href="//osakanakuwaenai.github.io/music/others">その他</a></li>
+        <li><a href="//kjtrgames.github.io/music/original">オリジナル</a></li>
+          <li><a href="//kjtrgames.github.io/music/second">二次創作</a></li>
+          <li><a href="//kjtrgames.github.io/music/others">その他</a></li>
         </ul>
       </li>
-      <li><a href="//osakanakuwaenai.github.io/pictures">&emsp;&emsp;&emsp;絵&emsp;&emsp;&emsp;</a>
+      <li><a href="//kjtrgames.github.io/pictures">&emsp;&emsp;&emsp;絵&emsp;&emsp;&emsp;</a>
         <ul>
-          <li><a href="//osakanakuwaenai.github.io/pictures/dots">ドット絵</a></li>
-          <li><a href="//osakanakuwaenai.github.io/pictures/others">その他の絵</a></li>
+          <li><a href="//kjtrgames.github.io/pictures/dots">ドット絵</a></li>
+          <li><a href="//kjtrgames.github.io/pictures/others">その他の絵</a></li>
         </ul>
       </li>
       <li><a href="https://forms.gle/VAdJjueZNdRPJi9aA">&emsp;&emsp;制作依頼&emsp;&emsp;</a></li>
