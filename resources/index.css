@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500&display=swap');
 
 
-@import url("./header.css");
+@import url("header.css");
 
-
+/**  if you change header length values, 
+/**  please be careful to be moved other header content by home SVG. 
+/**  That's wanted to avoid so adjust home SVG's values, if you do.
+/**/
 @media (prefers-color-scheme: light) {
   :root {
     --alert-bg: white;
@@ -69,6 +72,10 @@ body {
   vertical-align: middle;
 }
 
+.\^iconpath\^ {
+  fill: var(--font-color);
+}
+
 article {
   background: var(--yst-bg);
   border-radius: var(--yst-border-width);
@@ -85,14 +92,6 @@ article {
 
 h1, h2, h3, h4, h5, h6, .center {
   text-align: center;
-}
-
-header nav {
-  border: var(--header-border-color) var(--header-border-width) var(--header-border-style);
-}
-
-header nav>ul>li>ul {
-  border: var(--header-border-color) var(--header-border-width) var(--header-border-style);
 }
 
 table {

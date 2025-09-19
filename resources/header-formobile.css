@@ -1,31 +1,107 @@
-/* It's hamburger menu */
+/* It's for hamburger menu */
 
 :root {
   --is-hamburger: 1;
 }
 
-article {
-  transform: translateY(min(-2.5vh, -2.5vw));
+
+header li[home]>a>img {
+  height: 2em;
+  width: auto;
 }
 
+
 header nav>ul {
-  display: none;
-  height: 100%;
-  left: 100%;
-  position: absolute;
-  top: min(-2vh, -2vw);
+  font-size: 1.2em;
+}
+
+/* for menu's backgrounds */
+
+header nav>ul {
+  margin: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom:0;
+  list-style-type: none;
+  padding-top: 1em;
+  padding-bottom: auto;
+  padding-left: 0;
+  padding-right: auto;
   transition:
-    left var(--header-transition),
-    width var(--header-transition);
-  width: 0;
+    all var(--header-transition);
+  width: 0em;
+  white-space: nowrap;
   z-index: 222280;
 }
 
-#\^hamburger-io:checked~#\^hamburger~ul {
+#\^hamburger-io:checked~ul {
+  background-color: var(--header-bg);
   display: block;
-  left: 0;
-  width: 100%
+  width: 18em;
 }
+
+/* for marker */
+#\^hamburger-io~ul>li>a::before {
+  content: "▶︎";
+  color: transparent;
+  transition:
+    color calc(var(--header-transition) / 2) 0s;
+  }
+#\^hamburger-io:checked~ul>li:has(>a~ul)>a::before {
+  content: "▶︎";
+  color: var(--header-color);
+  transition:
+    color calc(var(--header-transition) / 2) calc(var(--header-transition) / 2);
+}
+#\^hamburger-io:checked~ul>li:hover>a::before {
+  content: "▼";
+}
+
+/* for childs */
+
+#\^hamburger-io:checked~ul>li>ul {
+  display: block;
+  position: relative;
+  left: 0;
+  list-style-type: none;
+  margin-block-start: 0;
+
+}
+#\^hamburger-io:checked~ul>li:hover>ul>li>a {
+  background: var(--header-content-bg);
+}
+
+#\^hamburger-io:checked~ul>li>ul>li {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#\^hamburger-io:checked~ul>li>ul>li>a {
+  height: 0;
+  line-height: 0;
+  opacity: 0;
+  transition: 
+    height var(--header-transition),
+    line-height var(--header-transition),
+    opacity var(--header-transition);
+}
+
+#\^hamburger-io:checked~ul>li:hover>ul>li>a {
+  height: 2em;
+  line-height: 2em;
+  opacity: 1;
+}
+#\^hamburger-io:checked~ul>li>ul>li:first-child>a {
+  border-radius: calc(var(--header-content-radius) / 4) calc(var(--header-content-radius) / 4) 0 0;
+}
+#\^hamburger-io:checked~ul>li>ul>li:last-child>a {
+  border-radius: 0 0 calc(var(--header-content-radius) / 4) calc(var(--header-content-radius) / 4);
+}
+
+
+/* for expander メニュー展開するやつ */
 
 #\^hamburger {
   align-items: center;
@@ -33,7 +109,7 @@ header nav>ul {
   border-color: var(--header-border-color);
   border-style: var(--header-border-style);
   border-width: var(--header-border-width);
-  /*/box-shadow: 0 0rem 1.5rem 0rem rgba(0, 0, 0, .75);/*/
+  /*/box-shadow: 0.1em 0.1em 0.3em 0.2em rgba(0, 0, 0, .75);/**/
   display: flex;
   height: max(8vh, 8vw, 50px);
   justify-content: center;
