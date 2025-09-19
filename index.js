@@ -62,10 +62,10 @@ hdr.innerHTML = `
     <label for="^hamburger-io" id="^hamburger"><span></span></label>
     <ul>
       <li><a href="index.html" home>&emsp;HOME&emsp;</a></li>
-      <li><a href="/programing">&emsp;プログラミング&emsp;</a>
+      <li><a href="/programming">&emsp;プログラミング&emsp;</a>
         <ul>
-          <li><a href="//osakanakuwaenai.github.io/programing/js">Java Script</a></li>
-          <li><a href="//osakanakuwaenai.github.io/programing/scratch">Scratch</a></li>
+          <li><a href="//osakanakuwaenai.github.io/programming/js">Java Script</a></li>
+          <li><a href="//osakanakuwaenai.github.io/programming/scratch">Scratch</a></li>
         </ul>
       </li>
       <li><a href="//osakanakuwaenai.github.io/minecraft">&emsp;&emsp;マイクラ&emsp;&emsp;</a>
