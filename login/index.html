@@ -17,7 +17,12 @@
 
     // ログイン
     document.getElementById('login').onclick = async () => {
-      const { error } = await sb_client.auth.signInWithOAuth({ provider: 'github' });
+      const { error } = await sb_client.auth.signInWithOAuth({
+        provider: 'github',
+        options: {
+          redirectTo: 'https://kjtrgames.github.io/'
+        }
+      });
       if (error) alert(error.message);
     };
 
